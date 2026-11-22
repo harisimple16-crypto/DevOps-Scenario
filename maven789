@@ -51,3 +51,28 @@ This file is for testing your website.
 
 now do the same as maven456,
 open settings->pages->master,/docs
+
+and copy that website ka URL nd paste it in 
+
+ @BeforeTest
+    public void openBrowser() throws InterruptedException {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        Thread.sleep(2000);
+        driver.get(" ur_website_ka_url");
+    }
+
+now under,
+  @Test
+    public void titleValidationTest() {
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "your_website_name";
+        Assert.assertEquals(actualTitle, expectedTitle);
+        Assert.assertTrue(true, "Title should contain 'your_website_ka_first_word'");
+    }
+
+do the changes as mentioned and open terminal and type:
+
+mvn clean install
+
+it will say build sucessfull and tests 1 failures:0,erros:0
