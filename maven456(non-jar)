@@ -39,3 +39,9 @@ mvn clean install
 
 Therefore,we have both html n css files under docs folder too
 
+to config ur github,open the terminal and type:
+
+git config --global user.email  "harisimple16@gmail.com"
+git config --global user.name  "harisimple16-crypto"
+git config --global --list
+
