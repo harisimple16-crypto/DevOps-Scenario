@@ -1,1 +1,13 @@
+everything same as maven456 until git push origin master
 
+open maven repository in browser-> search selenium-> click selenium java-> copy the dependency
+
+before pasting it in pom.xml open a tag called <dependencies> </dependencies> and paste it
+
+open maven repository in browser-> search testNG-> copy the dependency of latest version
+
+under the same dependency thing,add this also...dont create new <dependencies>
+
+now under test folder->right click on java folder->new->package->name it org.test
+
+now right click on org.test->new->javaclass-> name it WebpageTest->paste the testing code :
