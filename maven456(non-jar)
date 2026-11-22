@@ -43,10 +43,11 @@ to config ur github,open the terminal and type:
 
 git config --global user.email  "harisimple16@gmail.com"
 git config --global user.name  "harisimple16-crypto"
-git config --global --list
+git config --global --list (This shows Git identity settings, not necessarily the authenticated GitHub account.
+
+For authentication, check Windows Credential Manager and remove the previous user's GitHub credentials if present.)
 
 
-after that,go to windows credentials and in generic credentials,type ur username and pass
 
 after that in terminal,type:
 
@@ -60,7 +61,7 @@ after that create a new repo and copy repo ka link ands type in terminal:
 
 git remote add origin https://github.com/harisimple16-crypto/samplemaven456.git
 
-git push origin master / git push -u origin master
+git push origin master / git push -u origin master(if it asks for sign it,do it password:hariharan@R1)
 
 go to the repo,where you committed,look for settings->pages-> under branch choose master and /docs, refresh the page multiple times.
 Therefore,website ka link u will get there,
