@@ -1,1 +1,36 @@
+Open new project and click java ,give file name and click maven..Setup will be done
+
+add a java code under org.example in the file called Main.java
+
+Next Add this plugin tag in pom.xml after </properties>
+<build>
+<plugins>
+  <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>3.5.0</version>
+    <configuration>
+        <archive>
+            <manifest>
+                <mainClass>org.example.Main</mainClass>
+            </manifest>
+        </archive>
+    </configuration>
+ </plugin>
+</plugins>
+</build>
+
+A target folder will be created.
+
+Run these in  terminal:
+
+cd target\
+
+java -jar maven123JAR-1.0-SNAPSHOT.jar    (reference: under target folder u will see smtg like projname-1.0-SNAPSHOT.jar , copy that n paste it there)
+
+(o/p of java appplication will be seen)
+
+
+
+
 
