@@ -62,5 +62,8 @@ git remote add origin https://github.com/harisimple16-crypto/samplemaven456.git
 
 git push origin master / git push -u origin master
 
+go to the repo,where you committed,look for settings->pages-> under branch choose master and /docs, refresh the page multiple times.
+Therefore,website ka link u will get there,
+
 
 
