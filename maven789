@@ -11,3 +11,43 @@ under the same dependency thing,add this also...dont create new <dependencies>
 now under test folder->right click on java folder->new->package->name it org.test
 
 now right click on org.test->new->javaclass-> name it WebpageTest->paste the testing code :
+
+package org.test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class WebpageTest {
+
+    private static WebDriver driver;
+
+    @BeforeTest
+    public void openBrowser() throws InterruptedException {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        Thread.sleep(2000);
+        driver.get(" https://sandhyabshetty.github.io/mvn-project1/");
+    }
+
+    @Test
+    public void titleValidationTest() {
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "My Static Website";
+        Assert.assertEquals(actualTitle, expectedTitle);
+        Assert.assertTrue(true, "Title should contain 'static'");
+    }
+
+    @AfterTest
+    public void closeBrowser() throws InterruptedException {
+        Thread.sleep(1000);
+        driver.quit();
+    }
+}
+This file is for testing your website.
+
+now do the same as maven456,
+open settings->pages->master,/docs
