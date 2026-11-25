@@ -1,0 +1,72 @@
+until link same as gradle 456
+
+double click on test folder directly ->right click on java -> create package-> org.package->create class ->WebsiteTest.java
+
+Add this there:
+  change the oage link and title accordingly
+
+  package org.test;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class WebsiteTest {
+
+    private static WebDriver driver;
+
+    @BeforeTest
+    public void openBrowser() throws InterruptedException {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        Thread.sleep(2000);
+        driver.get("https://harisimple16-crypto.github.io/samplegradle456/");
+    }
+
+    @Test
+    public void titleValidationTest() {
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Event Management System";
+        Assert.assertEquals(actualTitle, expectedTitle);
+        Assert.assertTrue(true, "Title should contain 'Event'");
+    }
+
+    @AfterTest
+    public void closeBrowser() throws InterruptedException {
+        Thread.sleep(1000);
+        driver.quit();
+    }
+}
+
+
+in build.gradle
+
+remove the content inside dependencies and not the class dependencies{},and add the dependencies from
+
+TestNG and selenium java->gradle->groovy short
+
+  and add this:
+
+  dependencies {
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.54.0'
+    testImplementation 'org.testng:testng:7.12.0'
+}
+
+
+remove the earlier stuff that was there in test{} and add this:
+  test {
+    useTestNG()
+}
+
+Open terminal and run :
+
+gradle test
+
+OR
+
+click elephant icon->Tasks->verification->test(website shld open)
+
+done..
