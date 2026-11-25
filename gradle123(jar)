@@ -1,0 +1,38 @@
+groovy shld be choosed.
+
+In build.gradle folder,from repositories to including test,delete all.
+
+plugins {
+    id 'java'
+    id 'application'
+} add this there.
+
+
+add this plugin too:
+
+application {
+    mainClass = 'org.example.Main'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.example.Main'
+    }
+}
+
+Open terminal n type:
+
+gradle jar
+
+a folder called build wld be installed
+build->libs
+
+
+Open terminal n type:
+
+gradle run
+
+o/p wld come
+
+Open terminal n type:
+java -jar .\build\libs\filename
