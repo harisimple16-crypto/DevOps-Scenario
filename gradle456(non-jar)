@@ -1,3 +1,5 @@
+
+
 in resources,create a new directory called website.
   under that,create  index.html,style.css and script.js
 
@@ -21,3 +23,8 @@ and goto build.gradle,
 Open terminal n type:
 
   gradle copyWebsite
+   git init
+git add .
+git commit -m "This is my website"
+git remote add origin websitelink
+git push origin master
