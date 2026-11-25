@@ -28,3 +28,8 @@ git add .
 git commit -m "This is my website"
 git remote add origin websitelink
 git push origin master
+
+go to tht repo
+settings->pages->master->docs->save
+
+website goes live
