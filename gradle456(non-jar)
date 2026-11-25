@@ -1,0 +1,23 @@
+in resources,create a new directory called website.
+  under that,create  index.html,style.css and script.js
+
+and goto build.gradle,
+  from group{ to last ,everything shld be deleted.
+
+    and add this:
+
+    plugins {
+    id 'java'
+    id "application"
+}
+   task copyWebsite(type: Copy){
+    from 'src/main/resources/Website'
+    into 'docs'
+}
+
+
+
+
+Open terminal n type:
+
+  gradle copyWebsite
