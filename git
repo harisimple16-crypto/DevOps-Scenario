@@ -1,0 +1,114 @@
+Git & GitHub – Hands-on Cheat Sheet
+1. Install Git and Configure Username & Email
+Aim: Install Git and configure user details.
+
+harisimple16-crypto
+
+Commands:
+git --version
+
+git config --global user.name "Your Name"
+
+git config --global user.email "you@example.com"
+
+git config --global --list
+
+
+Result: Git installed and user configuration completed.
+
+2. Create Local Repository and Perform Three Commits
+Aim: Create a local repository and perform three commits.
+
+Procedure:
+1. Create website folder.
+2. Create index.html and style.css.
+3. Add HTML and CSS code.
+4. Initialize Git.
+5. Stage and commit files separately.
+6. Modify index.html and perform third commit.
+Commands:
+mkdir website
+cd website
+
+git init
+git status
+
+git add index.html
+git commit -m "Add index.html"
+
+git add style.css
+git commit -m "Add style.css"
+
+git add index.html
+git commit -m "Add new paragraph"
+
+git log --oneline
+
+
+Result: Local repository created with three commits.
+
+3. Create GitHub Repository and Push/Pull
+Aim: Connect a local repository to GitHub and perform push and pull operations.
+
+Procedure:
+1. Create a new repository on GitHub named website.
+2. Keep README, .gitignore and License unchecked.
+3. Connect the local repository.
+4. Push files to GitHub.
+5. Make a change on GitHub and pull it locally.
+Commands:
+git remote add origin <repository-url>
+
+git remote -v
+
+git branch -M master
+
+git push -u origin master
+
+git pull origin master
+
+
+For subsequent changes:
+git add .
+git commit -m "message"
+git push origin master
+
+
+Result: Local repository successfully connected and synchronized with GitHub.
+
+4. Git Branching and Merging
+Aim: Create a branch, make changes, merge it into master and delete the branch.
+
+Procedure:
+1. Create myproject folder and initialize Git.
+2. Create file1.txt on master and commit.
+3. Create and switch to feature-branch.
+4. Modify the file and commit.
+5. Switch back to master.
+6. Merge the feature branch.
+7. Verify and delete the branch.
+Commands:
+mkdir myproject
+cd myproject
+
+git init
+
+git add file1.txt
+git commit -m "This file is from Master"
+
+git branch feature-branch
+
+git switch feature-branch
+
+git add file1.txt
+git commit -m "Add new code in feature-branch"
+
+git switch master
+
+git merge feature-branch
+
+cat file1.txt
+
+git log --oneline
+
+git branch -d feature-branch
