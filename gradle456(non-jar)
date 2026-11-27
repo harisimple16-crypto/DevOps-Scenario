@@ -17,7 +17,7 @@ and goto build.gradle,
     into 'docs'
 }
 
-
+(groovy short)
 
 
 Open terminal n type:
