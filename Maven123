@@ -24,6 +24,8 @@ A target folder will be created.
 
 Run these in  terminal:
 
+mvn clean install
+
 cd target\
 
 java -jar maven123JAR-1.0-SNAPSHOT.jar    (reference: under target folder u will see smtg like projname-1.0-SNAPSHOT.jar , copy that n paste it there)
